@@ -1,7 +1,6 @@
 {
   "name": "@mitl-feedmysheep/entity",
   "version": "0.0.5",
-  "private": "false",
   "description": "분리된 엔티티 패키지",
   "scripts": {
     "build": "npm version patch && git push origin main && tsc && cp package.json dist && cd dist && npm publish && cd .."
