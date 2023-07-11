@@ -1,0 +1,19 @@
+{
+  "name": "@mitl-feedmysheep/entity",
+  "version": "0.0.3",
+  "private": "false",
+  "description": "분리된 엔티티 패키지",
+  "scripts": {
+    "build": "npm version patch && git push origin master && tsc && cp package.json dist && cd dist && npm publish && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/@mitl-feedmysheep/entity"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "typeorm": "^0.3.17"
+  }
+}
