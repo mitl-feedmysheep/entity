@@ -1,6 +1,6 @@
 {
   "name": "@mitl-feedmysheep/entity",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": "false",
   "description": "분리된 엔티티 패키지",
   "scripts": {
