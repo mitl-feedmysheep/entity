@@ -6,6 +6,7 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { MemberEntity } from "./member.entity";
+import { AdminEntity } from "./admin.entity";
 
 @Entity("authorization", { schema: "feed_my_sheep" })
 export class AuthorizationEntity {
@@ -19,6 +20,10 @@ export class AuthorizationEntity {
   @OneToOne(() => MemberEntity, (memberEntity) => memberEntity.authorization)
   @JoinColumn({ name: "authorization_id" })
   member: MemberEntity;
+
+  @OneToOne(() => AdminEntity, (adminEntity) => adminEntity.authorization)
+  @JoinColumn({ name: "authorization_id" })
+  admin: AdminEntity;
 
   @Column("bigint", { name: "church_id", comment: "교회 아이디" })
   churchId: number;

@@ -7,6 +7,7 @@ import {
 } from "typeorm";
 import { MemberEntity } from "./member.entity";
 import { PartEntity } from "./part.entity";
+import { AdminEntity } from "./admin.entity";
 
 @Index("church_name_UNIQUE", ["churchName"], { unique: true })
 @Entity("church", { schema: "feed_my_sheep" })
@@ -20,6 +21,9 @@ export class ChurchEntity {
 
   @OneToMany(() => MemberEntity, (memberEntity) => memberEntity.church)
   memberList: MemberEntity[];
+
+  @OneToMany(() => AdminEntity, (adminEntity) => adminEntity.church)
+  adminList: AdminEntity[];
 
   @OneToMany(() => PartEntity, (partEntity) => partEntity.church)
   partList: PartEntity[];
